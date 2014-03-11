@@ -9,25 +9,44 @@ body {
   flex-direction: row;
 }
 .tail {
-  padding: 20px;
-  border-top: 1px solid #ddd;
-  border-right: 1px solid #ddd;
+  padding: 10px 15px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
   -webkit-flex: 1 1 auto;
   -webkit-flex-wrap: wrap;
   -webkit-flex-basis: 20%;
+  opacity: 0.9;
+  cursor: pointer;
   position: relative;
-
+  z-index: 10;
+}
+.tail:hover {
+  opacity: 1.0;
+}
+.prod {
+  background: #556;
+  color: white;
+  text-shadow: -1px -1px 1px #333;
 }
 .person {
+  padding: 0;
 }
 .person .name{
   text-align: right;
   position: absolute;
   right: 10px;
   bottom: 10px;
-  color: #aaa;
 }
 .tail:hover {
+}
+.tech {
+  padding-top: 30px;
+  background: #dde;
+  text-align: center;
+  text-shadow: 1px 1px 0px white;
+}
+.tech h3 {
+  text-align: center;
 }
 .dbl {
   -webkit-flex-basis: 40%;
