@@ -1,0 +1,6 @@
+{
+  "name": "health-samurai",
+  "dependencies": {
+    "bootstrap": "latest"
+  }
+}

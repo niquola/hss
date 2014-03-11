@@ -1,0 +1,37 @@
+body {
+  padding-top: 0px;
+}
+.cnt {
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+
+  display: flex;
+  flex-direction: row;
+}
+.tail {
+  padding: 20px;
+  border-top: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  -webkit-flex: 1 1 auto;
+  -webkit-flex-wrap: wrap;
+  -webkit-flex-basis: 20%;
+  position: relative;
+
+}
+.person {
+}
+.person .name{
+  text-align: right;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  color: #aaa;
+}
+.tail:hover {
+}
+.dbl {
+  -webkit-flex-basis: 40%;
+}
+.trbl {
+  -webkit-flex-basis: 60%;
+}
