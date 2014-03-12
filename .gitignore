@@ -6,4 +6,3 @@ logs/*
 .DS_Store
 ._.DS_Store
 node_modules/lib/
-lib/
