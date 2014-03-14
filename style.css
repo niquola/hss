@@ -1,5 +1,6 @@
 body {
   padding-top: 0px;
+  padding: 2px;
 }
 .cnt {
   display: -webkit-flex;
@@ -9,16 +10,16 @@ body {
   flex-direction: row;
 }
 .tail {
-  padding: 10px 15px;
+  padding: 20px 40px;
   border-top: 2px solid #fff;
   border-right: 2px solid #fff;
   -webkit-flex: 1 1 auto;
   -webkit-flex-wrap: wrap;
   -webkit-flex-basis: 20%;
-  opacity: 0.9;
   cursor: pointer;
   position: relative;
   z-index: 10;
+  min-height: 180px;
 }
 .tail:hover {
   opacity: 1.0;
@@ -34,8 +35,11 @@ body {
 .person .name{
   text-align: right;
   position: absolute;
-  right: 10px;
-  bottom: 10px;
+  right: 0px;
+  bottom: 0px;
+  background: white;
+  opacity: 0.9;
+  padding: 6px;
 }
 .tail:hover {
 }
@@ -45,12 +49,58 @@ body {
   text-align: center;
   text-shadow: 1px 1px 0px white;
 }
+.tech h1 {
+  font-size: 40px;
+}
 .tech h3 {
   text-align: center;
 }
 .dbl {
   -webkit-flex-basis: 40%;
 }
+.dbl h3{
+  font-size: 40px;
+  font-weight: bold;
+}
 .trbl {
   -webkit-flex-basis: 60%;
+  background: #000;
+  color: white;
+}
+.trbl h1 {
+  font-size:50px;
+  font-weight: bold;
+}
+.trbl p {
+  font-size: 20px;
+  color: #aaa;
+}
+.nicola {
+  background: url('face1.jpg') no-repeat;
+}
+.serzh {
+  background: url('face2.jpg');
+}
+.mike {
+  background: url('face3.jpg');
+}
+.micke {
+  background: url('face4.jpg');
+}
+.max {
+  background: url('face5.jpg');
+}
+.sasha {
+  background: url('face6.jpg');
+}
+.pavlik {
+  background: url('face7.jpg') no-repeat;
+}
+.hant {
+  background: black;
+}
+.hant h3{
+  font-size: 60px;
+  color: white;
+  text-align: center;
 }
