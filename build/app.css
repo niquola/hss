@@ -1,6 +1,177 @@
+/* Reset.less
+ * Props to Eric Meyer (meyerweb.com) for his CSS reset file. We're using an adapted version here        that cuts out some of the reset HTML elements we will never need here (i.e., dfn, samp, etc).
+ * ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dd,
+dl,
+dt,
+li,
+ol,
+ul,
+fieldset,
+form,
+label,
+legend,
+button,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 100%;
+  line-height: 1;
+  font-family: inherit;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+ol,
+ul {
+  list-style: none;
+}
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: "";
+}
+html {
+  overflow-y: scroll;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+a:focus {
+  outline: thin dotted;
+}
+a:hover,
+a:active {
+  outline: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+audio:not([controls]) {
+  display: none;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+button,
+input {
+  line-height: normal;
+  *overflow: visible;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
 body {
   padding-top: 0px;
-  padding: 2px;
+  padding: 4px;
   font-size: 16px;
 }
 .cnt {
@@ -15,9 +186,9 @@ body {
   flex-direction: row;
 }
 .tail {
-  display: inline-block;
+  position: relative;
   text-decoration: none;
-  padding: 10px 30px;
+  padding: 0px;
   margin: 2px;
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 auto;
@@ -29,46 +200,50 @@ body {
   -webkit-flex-basis: 20%;
   -ms-flex-preferred-size: 20%;
   flex-basis: 20%;
-  position: relative;
   z-index: 10;
-  min-height: 180px;
+  min-height: 160px;
 }
 .tail.col-2 {
   -webkit-flex-basis: 40% !important;
   -ms-flex-preferred-size: 40% !important;
   flex-basis: 40% !important;
+  -webkit-box-flex: 2;
+  -webkit-flex: 2 1 auto;
+  -ms-flex: 2 1 auto;
+  flex: 2 1 auto;
 }
 .tail.col-3 {
   -webkit-flex-basis: 60% !important;
   -ms-flex-preferred-size: 60% !important;
   flex-basis: 60% !important;
+  -webkit-box-flex: 3;
+  -webkit-flex: 3 1 auto;
+  -ms-flex: 3 1 auto;
+  flex: 3 1 auto;
 }
 .tail.col-4 {
   -webkit-flex-basis: 80% !important;
   -ms-flex-preferred-size: 80% !important;
   flex-basis: 80% !important;
+  -webkit-box-flex: 4;
+  -webkit-flex: 4 1 auto;
+  -ms-flex: 4 1 auto;
+  flex: 4 1 auto;
 }
 .tail.black {
   color: white;
   background: black;
 }
-.tail:hover,
-.tail:active,
-.tail:visited,
-.tail:link {
-  text-decoration: none;
-  /* color: white; */
-}
-.tail {
-  position: relative;
-}
 .tail h1 {
   font-size: 40px;
+  margin: 30px 30px 15px 30px;
 }
 .tail h2 {
+  margin: 30px 30px 15px 30px;
   font-size: 30px;
 }
 .tail .footer {
+  margin: 0;
   text-align: right;
   position: absolute;
   font-size: 20px;
@@ -86,7 +261,15 @@ body {
   text-align: center;
 }
 .tail p {
+  margin: 30px 30px 15px 30px;
   font-size: 18px;
+}
+.tail:hover,
+.tail:active,
+.tail:visited,
+.tail:link {
+  text-decoration: none;
+  /* color: white; */
 }
 .tail:hover {
   z-index: 100000;
@@ -110,9 +293,11 @@ body {
 }
 .tail.logo {
   background-color: black;
-  background-image: url('../person-img/samurai_logo.png');
-  background-position: center;
-  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+}
+.tail.logo .icon {
+  font-size: 100px;
 }
 .nicola {
   background: url('../person-img/face1.jpg') no-repeat;
@@ -146,4 +331,19 @@ body {
 }
 .alexandr {
   background: url('../person-img/alexandr.jpg') no-repeat;
+}
+@font-face {
+  font-family: 'LogosFont';
+  src: url('../LogosFont.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+.icon {
+  display: inline-block;
+  font-family: LogosFont !important;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

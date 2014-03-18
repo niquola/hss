@@ -1,63 +1,51 @@
 body {
   padding-top: 0px;
-  padding: 2px;
+  padding: 4px;
   font-size: 16px;
 }
 .cnt {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
 }
 .tail {
-  display: inline-block;
+  position: relative;
   text-decoration: none;
-  padding: 10px 30px;
+  padding: 0px;
   margin: 2px;
   flex: 1 1 auto;
   flex-wrap: wrap;
   flex-basis: 20%;
-  position: relative;
   z-index: 10;
-  min-height: 180px;
+  min-height: 160px;
 
   &.col-2 {
     flex-basis: 40% !important;
+    flex: 2 1 auto;
   }
 
   &.col-3 {
     flex-basis: 60% !important;
+    flex: 3 1 auto;
   }
   &.col-4 {
     flex-basis: 80% !important;
+    flex: 4 1 auto;
   }
 
   &.black {
     color: white;
     background: black;
   }
-}
-
-.tail:hover,
-.tail:active,
-.tail:visited,
-.tail:link {
-  text-decoration: none;
-  /* color: white; */
-}
-.tail {
   h1 {
     font-size: 40px;
+    margin: 30px 30px 15px 30px;
   }
   h2{
+    margin: 30px 30px 15px 30px;
     font-size: 30px;
   }
   .footer {
+    margin: 0;
     text-align: right;
     position: absolute;
     font-size: 20px;
@@ -74,10 +62,18 @@ body {
   .center {
     text-align: center;
   }
-  position: relative;
   p {
+    margin: 30px 30px 15px 30px;
     font-size: 18px;
   }
+}
+
+.tail:hover,
+.tail:active,
+.tail:visited,
+.tail:link {
+  text-decoration: none;
+  /* color: white; */
 }
 .tail:hover {
   z-index: 100000;
@@ -101,9 +97,11 @@ body {
 }
 .tail.logo {
   background-color: black;
-  background-image: url('../person-img/samurai_logo.png');
-  background-position: center;
-  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  .icon {
+    font-size: 100px;
+  }
 }
 .nicola {
   background: url('../person-img/face1.jpg') no-repeat;
@@ -137,4 +135,20 @@ body {
 }
 .alexandr {
   background: url('../person-img/alexandr.jpg') no-repeat;
+}
+
+@font-face {
+  font-family: 'LogosFont';
+  src: url('../LogosFont.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+.icon {
+  display: inline-block;
+  font-family: LogosFont !important;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

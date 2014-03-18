@@ -43,7 +43,7 @@ module.exports = function (grunt) {
         dest: 'build/raw.app.css'
       },
       css_lib: {
-        src: ['bower_components/bootstrap/dist/css/bootstrap.min.css'],
+        src: [] ,//'bower_components/bootstrap/dist/css/bootstrap.min.css'],
         dest: 'build/lib.css'
       }
     },
