@@ -323,10 +323,10 @@ body p {
   font-size: 50px;
 }
 .tile.prod a:hover {
-  color: lightyellow;
+  color: lightgreen;
 }
 .tile.prod a:hover .icon {
-  color: red;
+  color: lightgreen;
 }
 .tile.tech {
   text-align: center;
