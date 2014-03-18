@@ -1,35 +1,87 @@
+@font-face {
+  font-family: 'LogosFont';
+  src: url('../LogosFont.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Shanghai';
+  src: url('../osaka-re.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
 body {
-  padding-top: 0px;
-  padding: 4px;
+  h1, h2, h3 {
+    font-family: helvetica;
+  }
+}
+.icon {
+  display: inline-block;
+  font-family: LogosFont !important;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  padding:0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
   font-size: 16px;
 }
-.cnt {
-  display: flex;
-  flex-direction: row;
+.tail {
+  perspective: 1000;
+  &:hover {
+    // z-index: 1000;
+    .flipper {
+      transform: rotateY(180deg);
+      .front {
+        background: white;
+        opacity: 0.9;
+      }
+    }
+  }
+  .flipper {
+    width:100%;
+    height: 100%;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    outline: 4px solid white;
+    .front, .back {
+      backface-visibility: hidden;
+      position: absolute;
+      width:100%;
+      height: 100%;
+    }
+    .back {
+      background: white;
+      opacity: 0.8;
+      transform: rotateY(180deg);
+    }
+  }
 }
+
 .tail {
   position: relative;
   text-decoration: none;
-  padding: 0px;
-  margin: 2px;
-  flex: 1 1 auto;
-  flex-wrap: wrap;
-  flex-basis: 20%;
-  z-index: 10;
-  min-height: 160px;
+  float: left;
+  width: 20%;
+  height: 200px;
+  overflow: visible;
+  outline: 4px solid white;
 
   &.col-2 {
-    flex-basis: 40% !important;
-    flex: 2 1 auto;
+    width: 40% !important;
   }
 
   &.col-3 {
-    flex-basis: 60% !important;
-    flex: 3 1 auto;
+    width: 60% !important;
   }
   &.col-4 {
-    flex-basis: 80% !important;
-    flex: 4 1 auto;
+    width: 80% !important;
   }
 
   &.black {
@@ -38,48 +90,65 @@ body {
   }
   h1 {
     font-size: 40px;
-    margin: 30px 30px 15px 30px;
+    margin: 30px 30px;
   }
   h2{
-    margin: 30px 30px 15px 30px;
+    margin: 30px 30px;
     font-size: 30px;
+  }
+  h3 {
+    margin: 30px 30px;
+    font-size: 20px;
   }
   .footer {
     margin: 0;
     text-align: right;
-    position: absolute;
+    // position: absolute;
     font-size: 20px;
-    right: 0px;
-    bottom: 5px;
-    background: white;
-    opacity: 0.9;
+    // right: 0px;
+    // bottom: 5px;
+    // background: white;
     padding: 6px;
+    padding-top:60px;
     color: black;
+    font-weight: bold;
+    text-shadow: 1px 2px 3px white;
   }
-  &:hover .footer {
-    color: red;
-  }
+  // &:hover .footer {
+  //   color: red;
+  // }
   .center {
     text-align: center;
   }
   p {
-    margin: 30px 30px 15px 30px;
+    margin: 30px 30px;
     font-size: 18px;
   }
 }
+@media (max-width: 800px) {
+  .tail {
+    position: relative;
+    text-decoration: none;
+    float: left;
+    width: 33%;
+    height: 250px;
+    overflow: hidden;
 
-.tail:hover,
-.tail:active,
-.tail:visited,
-.tail:link {
-  text-decoration: none;
-  /* color: white; */
+    &.col-2 {
+      width: 66% !important;
+    }
+
+    &.col-3 , &.col-4 {
+      width: 100% !important;
+    }
+  }
 }
-.tail:hover {
-  z-index: 100000;
-  opacity: 1.0;
-  border-radius: 10px;
+@media (max-width: 500px) {
+  .tail {
+    float: none;
+  }
 }
+
 .prod {
   background: #556;
   color: white;
@@ -89,13 +158,12 @@ body {
   }
 }
 .tech {
-  padding-top: 30px;
   background: #dde;
   text-align: center;
   text-shadow: 1px 1px 0px white;
   color: black;
 }
-.tail.logo {
+.logo {
   background-color: black;
   color: white;
   text-align: center;
@@ -137,18 +205,3 @@ body {
   background: url('../person-img/alexandr.jpg') no-repeat;
 }
 
-@font-face {
-  font-family: 'LogosFont';
-  src: url('../LogosFont.ttf');
-  font-weight: normal;
-  font-style: normal;
-}
-.icon {
-  display: inline-block;
-  font-family: LogosFont !important;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
