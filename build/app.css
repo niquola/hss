@@ -1,0 +1,182 @@
+body {
+  padding-top: 0px;
+  padding: 2px;
+  font-size: 16px;
+}
+.cnt {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+.tail {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin: 1px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-basis: 20%;
+  -ms-flex-preferred-size: 20%;
+  flex-basis: 20%;
+  position: relative;
+  z-index: 10;
+  min-height: 180px;
+}
+.tail:hover,
+.tail:active,
+.tail:visited,
+.tail:link {
+  text-decoration: none;
+  /* color: white; */
+}
+.tail:hover {
+  z-index: 100000;
+  opacity: 1.0;
+  border-radius: 10px;
+}
+.prod {
+  background: #556;
+  color: white;
+  text-shadow: -1px -1px 1px #333333;
+}
+.prod h1 {
+  font-size: 30px;
+}
+.person a {
+  display: block;
+  height: 100%;
+  position: relative;
+}
+.person:hover h1 {
+  color: red;
+}
+.person h1 {
+  text-align: right;
+  position: absolute;
+  font-size: 20px;
+  right: 0px;
+  bottom: 5px;
+  background: white;
+  opacity: 0.9;
+  padding: 6px;
+  color: black;
+}
+.tech {
+  padding-top: 30px;
+  background: #dde;
+  text-align: center;
+  text-shadow: 1px 1px 0px white;
+  color: black;
+}
+.tech h1 {
+  font-size: 20px;
+}
+.tech h3 {
+  text-align: center;
+}
+.tech p,
+.tech h3,
+.tech h1 {
+  color: black;
+}
+.dbl {
+  -webkit-flex-basis: 40% !important;
+  -ms-flex-preferred-size: 40% !important;
+  flex-basis: 40% !important;
+}
+.dbl h3 {
+  font-size: 40px;
+  font-weight: bold;
+}
+.trbl {
+  -webkit-flex-basis: 60% !important;
+  -ms-flex-preferred-size: 60% !important;
+  flex-basis: 60% !important;
+  background: #000;
+  color: white;
+}
+.trbl h1 {
+  font-size: 50px;
+  font-weight: bold;
+}
+.trbl p {
+  font-size: 20px;
+  color: #aaa;
+}
+.tail.logo {
+  background-color: black;
+  background-image: url('../person-img/samurai_logo.png');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.nicola {
+  background: url('../person-img/face1.jpg') no-repeat;
+}
+.serzh {
+  background: url('../person-img/face2.jpg');
+}
+.mike {
+  background: url('..//person-img/face3.jpg');
+}
+.micke {
+  background: url('../person-img/face4.jpg');
+}
+.max {
+  background: url('../person-img/face5.jpg');
+}
+.sasha {
+  background: url('../person-img/face6.jpg');
+}
+.pavlik {
+  background: url('../person-img/face7.jpg') no-repeat;
+}
+.dima {
+  background: url('../person-img/dima.jpg') no-repeat;
+}
+.danil {
+  background: url('../person-img/danil.jpg') no-repeat;
+}
+.oleg {
+  background: url('../person-img/oleg.jpg') no-repeat;
+}
+.alexandr {
+  background: url('../person-img/alexandr.jpg') no-repeat;
+}
+.hant {
+  background: black;
+}
+.hant h1 {
+  font-size: 60px;
+  color: white;
+  text-align: center;
+}
+.tail.b-o-w {
+  color: black;
+  background: white;
+}
+.tail.col-2 {
+  -webkit-flex-basis: 40% !important;
+  -ms-flex-preferred-size: 40% !important;
+  flex-basis: 40% !important;
+}
+.tail.col-3 {
+  -webkit-flex-basis: 60% !important;
+  -ms-flex-preferred-size: 60% !important;
+  flex-basis: 60% !important;
+}
+.tail.col-4 {
+  -webkit-flex-basis: 80% !important;
+  -ms-flex-preferred-size: 80% !important;
+  flex-basis: 80% !important;
+}

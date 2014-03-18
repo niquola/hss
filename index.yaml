@@ -1,0 +1,92 @@
+---
+title:  Тестовая статья о написании постов
+date:   2014-01-30 15:00:00
+author: Mike Ryzhikov
+layout: default
+rows:
+  - - cls: tech logo
+      title:  ""
+    - cls: trbl
+      title: Health Samurai
+      text: Team Of Professional Persons crafting Health IT with Open Source
+    - cls: prod
+      title: Lean/Agile
+      text: ...
+  - - cls: person nicola
+      title: Nikolay Ryzhikov
+      href: /persons/nicola.html
+    - cls: dbl prod
+      title: Med Client
+      text: "ONC sertified EHR<br/>we crafted for Choice Hospital Systems"
+    - cls: person pavlik
+      title: Pavel Smirnov
+      href: /persons/pavel-smirnov.html
+    - cls: tech
+      title: Health IT
+      text: Domain Driven Standards fanatics
+  - - cls: tech
+      title: SPRUG
+      text: "SPb Ruby User Group <br/>community driven"
+    - cls: person max
+      title: Maxim Bodnarchuk
+      href: /persons/maksym-bodnarchuk.html
+    - cls: dbl prod
+      title: FHIRBase
+      text: The relational database based on FHIR standard for healthcare software with document API</p>
+    - cls: person mike
+      title: Mikhail Ryzhikov
+      href: /persons/mike-ryzhikov.html
+  - - cls: person serzh
+      title: Sergey Nicheporchuk
+      href: /persons/serzh-nechyporchuk.html
+    - cls: tech hant
+      title: blog
+      href: /blog.html
+    - cls: person micke
+      title: Mikhail Lapshin
+      href: /persons/mike-lapshin.html
+    - cls: dbl prod
+      title:  Formstamp
+      text: FormStamp is a pure AngularJS widgets library designed for rich front-end web applications
+  - - cls: tech
+      title: SPb Clounge
+      text: Clojure User Group
+    - cls: dbl prod
+      title: Foodtaster
+      text: "Foodtaster is a library for testing your Chef code <br/> with Vagrant & RSpec"
+    - cls: tech hant
+      title: "?"
+    - cls: person sasha
+      title: Alexandra Pavlishina
+      href: /persons/alexandra-pavlyshina.html
+  - - cls: prod
+      title: Famili
+      text: Test fixtures factory
+    - cls: person alexandr
+      title: Sasha Alexandrov
+      href: /persons/sasha-alexandrov.html
+    - cls: tech
+      title: AWS
+      text: Lorem ispum
+    - cls: person dima
+      title: Dmitriy Nechaev
+      href: /persons/dmitriy-nechayev.html
+    - cls: prod
+      title: Health Seven
+      text: Ruby HL7 library
+  - - cls: person danil
+      title: Danil Kutkevich
+      href: /persons/danil-kutkevich.html
+    - cls: tech
+      title: Ruby [On Rails]
+      text: Lorem ispum
+    - cls: person oleg
+      title:  Oleg Sugatov
+      href: /persons/oleg-sugatov.html
+    - cls: prod
+      title: Terrminology
+      text:  Medical Terminology Service
+    - cls: tech
+      title:  Pair Programming
+      text:  Lorem ispum
+---
