@@ -83,7 +83,7 @@ body {
 
       .back {
         background: white;
-        opacity: 0.8;
+        opacity: 0.95;
         transform: rotateY(180deg);
       }
     }
@@ -99,6 +99,27 @@ body {
       font-size: 20px;
       background-color: rgba(255, 255, 255, 0.9);
     }
+
+    .back {
+      h2 {
+        margin: 20px 0;
+        text-align: center;
+      }
+
+      h3 {
+        text-align: center;
+      }
+
+      .links {
+        text-align: center;
+
+        .fa {
+          font-size: 30px;
+          margin: 5px;
+          color: #333;
+        }
+      }
+    }
   }
 
   &.prod {
@@ -113,10 +134,13 @@ body {
     }
     a {
       color: white;
+      .icon {
+        font-size: 50px;
+      }
       &:hover {
         color: lightyellow;
         .icon {
-          color: gold;
+          color: lightgreen;
         }
       }
     }
@@ -125,6 +149,12 @@ body {
   &.tech {
     .wrapper {
       background: #dde;
+      a {
+        color: black;
+        &:hover {
+          color: red;
+        }
+      }
     }
     text-align: center;
     text-shadow: 1px 1px 0px white;
@@ -133,12 +163,12 @@ body {
 
   &.logo {
     .wrapper {
-      background-color: black;
+      background-color: #111;
     }
     color: white;
     text-align: center;
     .icon {
-      font-size: 100px;
+      font-size: 130px;
     }
   }
 
@@ -156,22 +186,25 @@ body {
 
   &.black {
     color: white;
-    background: black;
+    background-color: #111;
   }
 
   h1 {
     font-size: 40px;
     margin: 30px 30px 10px 30px;
+    line-height: 110%;
   }
 
   h2{
     margin: 30px 30px 10px 30px;
     font-size: 30px;
+    line-height: 110%;
   }
 
   h3 {
     margin: 30px 30px 10px 30px;
     font-size: 20px;
+    line-height: 110%;
   }
 
   .center {
@@ -210,25 +243,25 @@ body {
 }
 
 .nicola {
-  background: url('../person-img/face1.jpg') no-repeat;
+  background: url('../person-img/nicola.jpg') no-repeat;
 }
 .serzh {
-  background: url('../person-img/face2.jpg');
+  background: url('../person-img/serzh.jpg') no-repeat;
 }
 .mike {
-  background: url('..//person-img/face3.jpg');
+  background: url('..//person-img/mike.jpg') no-repeat;
 }
 .micke {
-  background: url('../person-img/face4.jpg');
+  background: url('../person-img/micke.jpg') no-repeat;
 }
 .max {
-  background: url('../person-img/face5.jpg');
+  background: url('../person-img/max.jpg') no-repeat;
 }
 .sasha {
-  background: url('../person-img/face6.jpg');
+  background: url('../person-img/sasha.jpg') no-repeat;
 }
 .pavlik {
-  background: url('../person-img/face7.jpg') no-repeat;
+  background: url('../person-img/pavlik.jpg') no-repeat;
 }
 .dima {
   background: url('../person-img/dima.jpg') no-repeat;

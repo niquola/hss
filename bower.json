@@ -2,6 +2,7 @@
   "name": "health-samurai",
   "dependencies": {
     "bootstrap": "latest",
+    "components-font-awesome": "latest",
     "jquery": "latest"
   }
 }
