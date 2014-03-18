@@ -18,7 +18,7 @@ body {
   display: inline-block;
   text-decoration: none;
   padding: 10px 30px;
-  margin: 1px;
+  margin: 2px;
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
@@ -33,12 +33,60 @@ body {
   z-index: 10;
   min-height: 180px;
 }
+.tail.col-2 {
+  -webkit-flex-basis: 40% !important;
+  -ms-flex-preferred-size: 40% !important;
+  flex-basis: 40% !important;
+}
+.tail.col-3 {
+  -webkit-flex-basis: 60% !important;
+  -ms-flex-preferred-size: 60% !important;
+  flex-basis: 60% !important;
+}
+.tail.col-4 {
+  -webkit-flex-basis: 80% !important;
+  -ms-flex-preferred-size: 80% !important;
+  flex-basis: 80% !important;
+}
+.tail.black {
+  color: white;
+  background: black;
+}
 .tail:hover,
 .tail:active,
 .tail:visited,
 .tail:link {
   text-decoration: none;
   /* color: white; */
+}
+.tail {
+  position: relative;
+}
+.tail h1 {
+  font-size: 40px;
+}
+.tail h2 {
+  font-size: 30px;
+}
+.tail .footer {
+  text-align: right;
+  position: absolute;
+  font-size: 20px;
+  right: 0px;
+  bottom: 5px;
+  background: white;
+  opacity: 0.9;
+  padding: 6px;
+  color: black;
+}
+.tail:hover .footer {
+  color: red;
+}
+.tail .center {
+  text-align: center;
+}
+.tail p {
+  font-size: 18px;
 }
 .tail:hover {
   z-index: 100000;
@@ -50,27 +98,8 @@ body {
   color: white;
   text-shadow: -1px -1px 1px #333333;
 }
-.prod h1 {
-  font-size: 30px;
-}
-.person a {
-  display: block;
-  height: 100%;
-  position: relative;
-}
-.person:hover h1 {
-  color: red;
-}
-.person h1 {
-  text-align: right;
-  position: absolute;
-  font-size: 20px;
-  right: 0px;
-  bottom: 5px;
-  background: white;
-  opacity: 0.9;
-  padding: 6px;
-  color: black;
+.prod:hover {
+  color: white;
 }
 .tech {
   padding-top: 30px;
@@ -78,41 +107,6 @@ body {
   text-align: center;
   text-shadow: 1px 1px 0px white;
   color: black;
-}
-.tech h1 {
-  font-size: 20px;
-}
-.tech h3 {
-  text-align: center;
-}
-.tech p,
-.tech h3,
-.tech h1 {
-  color: black;
-}
-.dbl {
-  -webkit-flex-basis: 40% !important;
-  -ms-flex-preferred-size: 40% !important;
-  flex-basis: 40% !important;
-}
-.dbl h3 {
-  font-size: 40px;
-  font-weight: bold;
-}
-.trbl {
-  -webkit-flex-basis: 60% !important;
-  -ms-flex-preferred-size: 60% !important;
-  flex-basis: 60% !important;
-  background: #000;
-  color: white;
-}
-.trbl h1 {
-  font-size: 50px;
-  font-weight: bold;
-}
-.trbl p {
-  font-size: 20px;
-  color: #aaa;
 }
 .tail.logo {
   background-color: black;
@@ -152,31 +146,4 @@ body {
 }
 .alexandr {
   background: url('../person-img/alexandr.jpg') no-repeat;
-}
-.hant {
-  background: black;
-}
-.hant h1 {
-  font-size: 60px;
-  color: white;
-  text-align: center;
-}
-.tail.b-o-w {
-  color: black;
-  background: white;
-}
-.tail.col-2 {
-  -webkit-flex-basis: 40% !important;
-  -ms-flex-preferred-size: 40% !important;
-  flex-basis: 40% !important;
-}
-.tail.col-3 {
-  -webkit-flex-basis: 60% !important;
-  -ms-flex-preferred-size: 60% !important;
-  flex-basis: 60% !important;
-}
-.tail.col-4 {
-  -webkit-flex-basis: 80% !important;
-  -ms-flex-preferred-size: 80% !important;
-  flex-basis: 80% !important;
 }

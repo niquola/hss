@@ -4,51 +4,60 @@ body {
   font-size: 16px;
 }
 .cnt {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
-
 }
 .tail {
   display: inline-block;
   text-decoration: none;
-  color: white;
   padding: 10px 30px;
-  &:hover, &:active, &:visited, &:link {
-    text-decoration: none;
-    color: white;
-  }
-  &:hover {
-    z-index: 100000;
-    opacity: 1.0;
-    border-radius: 10px;
-  }
-
-  margin: 1px;
+  margin: 2px;
   flex: 1 1 auto;
   flex-wrap: wrap;
   flex-basis: 20%;
   position: relative;
   z-index: 10;
   min-height: 180px;
+
+  &.col-2 {
+    flex-basis: 40% !important;
+  }
+
+  &.col-3 {
+    flex-basis: 60% !important;
+  }
+  &.col-4 {
+    flex-basis: 80% !important;
+  }
+
+  &.black {
+    color: white;
+    background: black;
+  }
 }
-.prod {
-  background: #556;
-  color: white;
-  text-shadow: -1px -1px 1px #333;
-  h1{
+
+.tail:hover,
+.tail:active,
+.tail:visited,
+.tail:link {
+  text-decoration: none;
+  /* color: white; */
+}
+.tail {
+  h1 {
+    font-size: 40px;
+  }
+  h2{
     font-size: 30px;
   }
-}
-.person {
-  a {
-    display: block;
-    height: 100%;
-    position: relative;
-  }
-  &:hover h1{
-    color: red;
-  }
-  h1 {
+  .footer {
     text-align: right;
     position: absolute;
     font-size: 20px;
@@ -59,6 +68,29 @@ body {
     padding: 6px;
     color: black;
   }
+  &:hover .footer {
+    color: red;
+  }
+  .center {
+    text-align: center;
+  }
+  position: relative;
+  p {
+    font-size: 18px;
+  }
+}
+.tail:hover {
+  z-index: 100000;
+  opacity: 1.0;
+  border-radius: 10px;
+}
+.prod {
+  background: #556;
+  color: white;
+  text-shadow: -1px -1px 1px #333333;
+  &:hover {
+    color: white;
+  }
 }
 .tech {
   padding-top: 30px;
@@ -66,39 +98,12 @@ body {
   text-align: center;
   text-shadow: 1px 1px 0px white;
   color: black;
-  h1 {
-    font-size: 20px;
-  }
-  h3 {
-    text-align: center;
-  }
-  p, h3, h1 {
-    color: black;
-  }
 }
-.dbl {
-  flex-basis: 40% !important;
-  h3{
-    font-size: 40px;
-    font-weight: bold;
-  }
-}
-.trbl {
-  flex-basis: 60% !important;
-  background: #000;
-  color: white;
-  h1 {
-    font-size:50px;
-    font-weight: bold;
-  }
-  p {
-    font-size: 20px;
-    color: #aaa;
-  }
-}
-.logo {
+.tail.logo {
   background-color: black;
-  background: url('../person-img/samurai_logo.png') contained no-repeat;
+  background-image: url('../person-img/samurai_logo.png');
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .nicola {
   background: url('../person-img/face1.jpg') no-repeat;
@@ -132,26 +137,4 @@ body {
 }
 .alexandr {
   background: url('../person-img/alexandr.jpg') no-repeat;
-}
-.hant {
-  background: black;
-}
-.hant h1{
-  font-size: 60px;
-  color: white;
-  text-align: center;
-}
-.tail.b-o-w {
-  color: black;
-  background: white;
-}
-.tail.col-2 {
-  flex-basis: 40% !important;
-}
-.tail.col-3 {
-  flex-basis: 60% !important;
-}
-
-.tail.col-4 {
-  flex-basis: 80% !important;
 }
