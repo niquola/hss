@@ -181,110 +181,136 @@ textarea {
   font-weight: normal;
   font-style: normal;
 }
-body h1,
-body h2,
-body h3 {
-  font-family: helvetica;
-}
-.icon {
-  display: inline-block;
-  font-family: LogosFont !important;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 body {
   padding: 0;
   margin: 0;
   width: 100%;
   height: 100%;
   font-size: 16px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
-.tail {
-  perspective: 1000;
+.icon {
+  display: inline-block;
+  font-family: LogosFont ;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-.tail:hover .flipper {
-  transform: rotateY(180deg);
-}
-.tail:hover .flipper .front {
-  background: white;
-  opacity: 0.9;
-}
-.tail .flipper {
-  width: 100%;
-  height: 100%;
-  transition: 0.6s;
-  transform-style: preserve-3d;
-  position: relative;
-  outline: 4px solid white;
-}
-.tail .flipper .front,
-.tail .flipper .back {
-  backface-visibility: hidden;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-.tail .flipper .back {
-  background: white;
-  opacity: 0.8;
-  transform: rotateY(180deg);
-}
-.tail {
+.tile {
   position: relative;
   text-decoration: none;
   float: left;
   width: 20%;
   height: 200px;
   overflow: visible;
-  outline: 4px solid white;
 }
-.tail.col-2 {
-  width: 40% !important;
+.tile .wrapper {
+  box-sizing: border-box;
+  border: 5px solid #fff;
+  width: 100%;
+  height: 100%;
 }
-.tail.col-3 {
-  width: 60% !important;
+.tile.flipper {
+  perspective: 1000;
+  border-color: transparent;
 }
-.tail.col-4 {
-  width: 80% !important;
+.tile.flipper:hover .wrapper {
+  transform: rotateY(180deg);
 }
-.tail.black {
+.tile.flipper:hover .wrapper .front {
+  background: white;
+  opacity: 0.9;
+}
+.tile.flipper .wrapper {
+  width: 100%;
+  height: 100%;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+.tile.flipper .wrapper .front,
+.tile.flipper .wrapper .back {
+  backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.tile.flipper .wrapper .back {
+  background: white;
+  opacity: 0.8;
+  transform: rotateY(180deg);
+}
+.tile.person .badge {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.tile.prod {
+  color: white;
+  text-shadow: -1px -1px 1px #333333;
+}
+.tile.prod .wrapper {
+  background: #556;
+}
+.tile.prod:hover {
+  color: white;
+}
+.tile.tech {
+  text-align: center;
+  text-shadow: 1px 1px 0px white;
+  color: black;
+}
+.tile.tech .wrapper {
+  background: #dde;
+}
+.tile.logo {
+  color: white;
+  text-align: center;
+}
+.tile.logo .wrapper {
+  background-color: black;
+}
+.tile.logo .icon {
+  font-size: 100px;
+}
+.tile.col-2 {
+  width: 40% ;
+}
+.tile.col-3 {
+  width: 60% ;
+}
+.tile.col-4 {
+  width: 80% ;
+}
+.tile.black {
   color: white;
   background: black;
 }
-.tail h1 {
+.tile h1 {
   font-size: 40px;
   margin: 30px 30px;
 }
-.tail h2 {
+.tile h2 {
   margin: 30px 30px;
   font-size: 30px;
 }
-.tail h3 {
+.tile h3 {
   margin: 30px 30px;
   font-size: 20px;
 }
-.tail .footer {
-  margin: 0;
-  text-align: right;
-  font-size: 20px;
-  padding: 6px;
-  padding-top: 60px;
-  color: black;
-  font-weight: bold;
-  text-shadow: 1px 2px 3px white;
-}
-.tail .center {
+.tile .center {
   text-align: center;
 }
-.tail p {
+.tile p {
   margin: 30px 30px;
   font-size: 18px;
 }
 @media (max-width: 800px) {
-  .tail {
+  .tile {
     position: relative;
     text-decoration: none;
     float: left;
@@ -292,40 +318,18 @@ body {
     height: 250px;
     overflow: hidden;
   }
-  .tail.col-2 {
-    width: 66% !important;
+  .tile.col-2 {
+    width: 66% ;
   }
-  .tail.col-3,
-  .tail.col-4 {
-    width: 100% !important;
+  .tile.col-3,
+  .tile.col-4 {
+    width: 100% ;
   }
 }
 @media (max-width: 500px) {
-  .tail {
+  .tile {
     float: none;
   }
-}
-.prod {
-  background: #556;
-  color: white;
-  text-shadow: -1px -1px 1px #333333;
-}
-.prod:hover {
-  color: white;
-}
-.tech {
-  background: #dde;
-  text-align: center;
-  text-shadow: 1px 1px 0px white;
-  color: black;
-}
-.logo {
-  background-color: black;
-  color: white;
-  text-align: center;
-}
-.logo .icon {
-  font-size: 100px;
 }
 .nicola {
   background: url('../person-img/face1.jpg') no-repeat;

@@ -4,129 +4,172 @@
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Shanghai';
   src: url('../osaka-re.ttf');
   font-weight: normal;
   font-style: normal;
 }
-body {
-  h1, h2, h3 {
-    font-family: helvetica;
-  }
-}
-.icon {
-  display: inline-block;
-  font-family: LogosFont !important;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+
 body {
   padding:0;
   margin: 0;
   width: 100%;
   height: 100%;
   font-size: 16px;
-}
-.tail {
-  perspective: 1000;
-  &:hover {
-    // z-index: 1000;
-    .flipper {
-      transform: rotateY(180deg);
-      .front {
-        background: white;
-        opacity: 0.9;
-      }
-    }
-  }
-  .flipper {
-    width:100%;
-    height: 100%;
-    transition: 0.6s;
-    transform-style: preserve-3d;
-    position: relative;
-    outline: 4px solid white;
-    .front, .back {
-      backface-visibility: hidden;
-      position: absolute;
-      width:100%;
-      height: 100%;
-    }
-    .back {
-      background: white;
-      opacity: 0.8;
-      transform: rotateY(180deg);
-    }
-  }
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
-.tail {
+.icon {
+  display: inline-block;
+  font-family: LogosFont ;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.tile {
   position: relative;
   text-decoration: none;
   float: left;
   width: 20%;
   height: 200px;
   overflow: visible;
-  outline: 4px solid white;
+
+  .wrapper {
+    box-sizing: border-box;
+    border: 5px solid #fff;
+    width: 100%;
+    height: 100%;
+  }
+
+  &.flipper {
+    perspective: 1000;
+    border-color: transparent;
+
+    &:hover {
+      .wrapper {
+        transform: rotateY(180deg);
+
+        .front {
+          background: white;
+          opacity: 0.9;
+        }
+      }
+    }
+
+    .wrapper {
+      width:100%;
+      height: 100%;
+      transition: 0.6s;
+      transform-style: preserve-3d;
+      position: relative;
+
+      .front, .back {
+        backface-visibility: hidden;
+        position: absolute;
+        width:100%;
+        height: 100%;
+      }
+
+      .back {
+        background: white;
+        opacity: 0.8;
+        transform: rotateY(180deg);
+      }
+    }
+  }
+
+  &.person {
+    .badge {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      font-weight: bold;
+      font-size: 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+  }
+
+  &.prod {
+    .wrapper {
+      background: #556;
+    }
+
+    color: white;
+    text-shadow: -1px -1px 1px #333333;
+    &:hover {
+      color: white;
+    }
+  }
+
+  &.tech {
+    .wrapper {
+      background: #dde;
+    }
+    text-align: center;
+    text-shadow: 1px 1px 0px white;
+    color: black;
+  }
+
+  &.logo {
+    .wrapper {
+      background-color: black;
+    }
+    color: white;
+    text-align: center;
+    .icon {
+      font-size: 100px;
+    }
+  }
 
   &.col-2 {
-    width: 40% !important;
+    width: 40% ;
   }
 
   &.col-3 {
-    width: 60% !important;
+    width: 60% ;
   }
+
   &.col-4 {
-    width: 80% !important;
+    width: 80% ;
   }
 
   &.black {
     color: white;
     background: black;
   }
+
   h1 {
     font-size: 40px;
     margin: 30px 30px;
   }
+
   h2{
     margin: 30px 30px;
     font-size: 30px;
   }
+
   h3 {
     margin: 30px 30px;
     font-size: 20px;
   }
-  .footer {
-    margin: 0;
-    text-align: right;
-    // position: absolute;
-    font-size: 20px;
-    // right: 0px;
-    // bottom: 5px;
-    // background: white;
-    padding: 6px;
-    padding-top:60px;
-    color: black;
-    font-weight: bold;
-    text-shadow: 1px 2px 3px white;
-  }
-  // &:hover .footer {
-  //   color: red;
-  // }
+
   .center {
     text-align: center;
   }
+
   p {
     margin: 30px 30px;
     font-size: 18px;
   }
 }
+
 @media (max-width: 800px) {
-  .tail {
+  .tile {
     position: relative;
     text-decoration: none;
     float: left;
@@ -135,42 +178,21 @@ body {
     overflow: hidden;
 
     &.col-2 {
-      width: 66% !important;
+      width: 66% ;
     }
 
     &.col-3 , &.col-4 {
-      width: 100% !important;
+      width: 100% ;
     }
   }
 }
+
 @media (max-width: 500px) {
-  .tail {
+  .tile {
     float: none;
   }
 }
 
-.prod {
-  background: #556;
-  color: white;
-  text-shadow: -1px -1px 1px #333333;
-  &:hover {
-    color: white;
-  }
-}
-.tech {
-  background: #dde;
-  text-align: center;
-  text-shadow: 1px 1px 0px white;
-  color: black;
-}
-.logo {
-  background-color: black;
-  color: white;
-  text-align: center;
-  .icon {
-    font-size: 100px;
-  }
-}
 .nicola {
   background: url('../person-img/face1.jpg') no-repeat;
 }
