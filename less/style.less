@@ -44,7 +44,7 @@ body {
 
   .wrapper {
     box-sizing: border-box;
-    border: 4px solid #fff;
+    border: 2px solid #fff;
     width: 100%;
     height: 100%;
   }
@@ -104,6 +104,7 @@ body {
       h2 {
         margin: 20px 0;
         text-align: center;
+        color: red;
       }
 
       h3 {
@@ -133,6 +134,15 @@ body {
     }
   }
 
+  &.main {
+    h1 {
+      font-size: 50px;
+    }
+    h3 {
+      text-align: right;
+      color: #ddd;
+    }
+  }
   &.prod {
     .wrapper {
       background: #556;
@@ -151,7 +161,7 @@ body {
       &:hover {
         color: lightyellow;
         .icon {
-          color: lightgreen;
+          color: red;
         }
       }
     }
@@ -198,6 +208,12 @@ body {
   &.black {
     color: white;
     background-color: #111;
+    a {
+      color: white;
+      &:hover {
+        color: red;
+      }
+    }
   }
 
   h1 {
@@ -220,6 +236,9 @@ body {
 
   .center {
     text-align: center;
+  }
+  .right {
+    text-align: right;
   }
 
   p {
